@@ -1,0 +1,38 @@
+/* -----------------------------------------------------------------------------
+// 3. Hero Title
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Hero Title
+
+
+// Hero Title
+// --------------------------------------------------
+.hero-title {
+    padding: 100px 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    text-align: center;
+
+    // title
+    h2 {
+        font-size: 48px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-family: $links-font-family;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,96 @@
+/* -----------------------------------------------------------------------------
+// 4. Messages 
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Message
+
+
+//
+// Message
+// --------------------------------------------------
+.message {
+    position: relative;
+    margin: 15px 0;
+    padding: 25px 40px 25px 120px;
+    background-color: $color-default;
+    font-size: 16px;
+
+    &:before {
+        font-family: 'FontAwesome';
+        content: '\f0e0'; // envelope icon
+        font-size: 24px;
+        color: $color-default-dark;
+        background-color: #fff;
+        text-align: center;
+        line-height: 70px;
+
+        position:absolute;
+        top: 32px;
+        left: 20px;
+
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+    }
+
+    h4 {
+        margin: 0;
+    }
+
+    p {
+        margin: 10px 0 0 0;
+    }
+
+    // warning message
+    &-warning {
+        background-color: $color-warning;
+
+        &:before {
+            content: '\f0f3';
+            color: $color-warning-dark;
+        }
+    }
+
+    // danger message
+    &-danger {
+        background-color: $color-danger;
+
+        &:before {
+            content: '\f071';
+            color: $color-danger-dark;
+        }
+    }
+
+    // success message
+    &-success {
+        background-color: $color-success;
+
+        &:before {
+            content: '\f00c';
+            color: $color-success-dark;
+        }
+    }
+
+    // help message
+    &-help {
+        background-color: $color-help;
+
+        &:before {
+            content: '\f0e9';
+            color: $color-help-dark;
+        }
+    }
+
+    // info message
+    &-info {
+        background-color: $color-info;
+
+        &:before {
+            content: '\f0a1';
+            color: $color-info-dark;
+        }
+    }
+}

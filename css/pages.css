@@ -1,0 +1,896 @@
+/*
+// Table of content
+// -----------------------------------------------------------------------------
+// - 1. Homepage
+// - 2. About Page
+// - 3. Services Page
+// - 4. Blog Page
+// - 5. Blog Detail Page
+// - 6. Work Page
+// - 7. Work Detail Page
+// - 8. Contact Page
+*/
+/* -----------------------------------------------------------------------------
+// 1. Homepage
+// ----------------------------------------------------------------------------- */
+.homepage .section-headline {
+  margin-bottom: 50px;
+  text-align: center; }
+  .homepage .section-headline h3 {
+    font-weight: 500;
+    text-transform: uppercase; }
+    .homepage .section-headline h3:after {
+      display: block;
+      content: ' ';
+      width: 40px;
+      height: 2px;
+      margin: 15px auto 30px auto;
+      background-color: #3fb3e5; }
+.homepage .hero-slider {
+  position: relative;
+  max-height: 700px;
+  overflow: hidden;
+  text-align: center; }
+  .homepage .hero-slider .content {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .homepage .hero-slider h2 {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff; }
+    .homepage .hero-slider h2 small {
+      display: block;
+      font-family: "Montserrat", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #fff;
+      margin-top: 50px;
+      letter-spacing: 4px; }
+  .homepage .hero-slider .btn {
+    margin-right: 10px;
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff; }
+    .homepage .hero-slider .btn:hover {
+      color: #3fb3e5;
+      background-color: #fff; }
+  .homepage .hero-slider .owl-pagination {
+    bottom: 70px; }
+    .homepage .hero-slider .owl-pagination .owl-page span {
+      margin: 5px 4px;
+      filter: Alpha(Opacity=100);
+      opacity: 1;
+      border: 1px solid #fff; }
+    .homepage .hero-slider .owl-pagination .owl-page.active span {
+      border-color: #fff;
+      background-color: #fff; }
+@media (max-width: 768px) {
+  .homepage .hero-slider .content {
+    top: 50%; }
+  .homepage .hero-slider h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 24px; }
+    .homepage .hero-slider h2 small {
+      margin-top: 15px;
+      font-size: 14px; }
+  .homepage .hero-slider .btn {
+    font-size: 12px;
+    padding: 10px 15px; }
+  .homepage .hero-slider .owl-controls {
+    display: none !important; } }
+.homepage .portfolio .portfolio-item .img {
+  margin-bottom: 0; }
+  .homepage .portfolio .portfolio-item .img:hover .caption {
+    opacity: 1; }
+.homepage .portfolio .portfolio-item .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+  .homepage .portfolio .portfolio-item .caption:after {
+    content: ' ';
+    position: absolute;
+    top: 5%;
+    left: 4%;
+    width: 92%;
+    height: 90%;
+    border: 1px solid #fff; }
+  .homepage .portfolio .portfolio-item .caption h4 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    .homepage .portfolio .portfolio-item .caption h4 a {
+      color: #fff; }
+    .homepage .portfolio .portfolio-item .caption h4 small {
+      display: block;
+      color: #fff;
+      margin-top: 10px;
+      font-size: 10px;
+      letter-spacing: 2px; }
+.homepage .portfolio .portfolio-item.split .img {
+  width: 50% !important;
+  float: left; }
+.homepage .work .work-item {
+  width: 20%;
+  float: left;
+  padding: 0 15px; }
+  .homepage .work .work-item .icon {
+    background-color: #fff;
+    color: #3fb3e5; }
+    .homepage .work .work-item .icon:hover {
+      background-color: #3fb3e5;
+      color: #fff; }
+  .homepage .work .work-item h4 {
+    font-size: 14px; }
+@media (max-width: 992px) {
+  .homepage .work .work-item {
+    width: 50%; } }
+.homepage .testimonials {
+  padding-bottom: 120px;
+  background: url(http://placehold.it/1895x900) center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+.homepage .news .post {
+  position: relative;
+  overflow: hidden; }
+  .homepage .news .post img {
+    position: absolute;
+    top: 0;
+    width: 50%; }
+  .homepage .news .post img.reverse {
+    right: 0; }
+  .homepage .news .post .col-md-6 {
+    padding: 0; }
+.homepage .news .post-content {
+  padding: 60px 50px;
+  background-color: #f6fcff; }
+  .homepage .news .post-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px; }
+    .homepage .news .post-content h3 a {
+      color: #181818; }
+    .homepage .news .post-content h3 + p {
+      margin-bottom: 30px; }
+.homepage .clients .owl-item {
+  text-align: center; }
+.homepage .clients img {
+  opacity: .5;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+  .homepage .clients img:hover {
+    opacity: 1; }
+.homepage .clients .owl-pagination {
+  bottom: -50px; }
+  .homepage .clients .owl-pagination .owl-page span {
+    margin: 5px 4px;
+    filter: Alpha(Opacity=100);
+    opacity: 1;
+    border: 1px solid #c6c6c6; }
+  .homepage .clients .owl-pagination .owl-page.active span {
+    border-color: #3fb3e5;
+    background-color: transparent; }
+
+/* -----------------------------------------------------------------------------
+// 2. About Page 
+// ----------------------------------------------------------------------------- */
+.about .section-headline {
+  margin-bottom: 50px;
+  text-align: center; }
+  .about .section-headline h3 {
+    font-weight: 500;
+    text-transform: uppercase; }
+    .about .section-headline h3:after {
+      display: block;
+      content: ' ';
+      width: 40px;
+      height: 2px;
+      margin: 15px auto 30px auto;
+      background-color: #3fb3e5; }
+.about .hero-title {
+  background-image: url(http://placehold.it/1895x900); }
+.about .testimonials {
+  padding-bottom: 120px;
+  background: url(http://placehold.it/1895x900) center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .about .testimonials .twitter-icon {
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    background-color: #fff;
+    color: #3fb3e5;
+    font-size: 20px;
+    line-height: 80px;
+    text-align: center;
+    margin: 0 auto 50px auto; }
+  .about .testimonials .tweet {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; }
+    .about .testimonials .tweet p {
+      font-size: 30px;
+      letter-spacing: 1px;
+      line-height: 40px;
+      color: #fff; }
+    .about .testimonials .tweet a {
+      color: #fff;
+      text-decoration: underline; }
+    .about .testimonials .tweet h4 {
+      margin-top: 40px;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 1px; }
+      .about .testimonials .tweet h4 small {
+        margin-top: 10px;
+        display: block;
+        font-size: 10px;
+        color: #fff; }
+  @media (max-width: 992px) {
+    .about .testimonials .tweet {
+      width: 95%; }
+    .about .testimonials .tweet p {
+      font-size: 18px;
+      line-height: 24px; } }
+.about .counters {
+  background: url(../img/counters.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .about .counters .progress-item {
+    text-align: center; }
+    .about .counters .progress-item strong {
+      font-family: "Montserrat", Helvetica, Arial, sans-serif;
+      position: absolute;
+      top: 52px;
+      right: 0;
+      left: 0;
+      color: #181818;
+      font-weight: 500;
+      font-size: 30px; }
+    .about .counters .progress-item h4 {
+      font-weight: 500;
+      margin: 30px 0;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #4b4b4b; }
+    .about .counters .progress-item p {
+      padding: 0 15px; }
+  @media (max-width: 992px) {
+    .about .counters .progress-item {
+      margin-bottom: 30px; } }
+.about .instagram .instagram-item {
+  position: relative;
+  width: 14.28%;
+  float: left; }
+  .about .instagram .instagram-item:hover .caption {
+    opacity: 1; }
+  .about .instagram .instagram-item .caption {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background-color: #3fb3e5;
+    background-color: rgba(63, 179, 229, 0.9);
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+  .about .instagram .instagram-item h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff; }
+  .about .instagram .instagram-item p {
+    color: #fff;
+    font-size: 13px; }
+  .about .instagram .instagram-item i {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-size: 20px;
+    color: #fff; }
+@media (max-width: 992px) {
+  .about .instagram .instagram-item {
+    width: 33.3333%; } }
+@media (max-width: 768px) {
+  .about .instagram .instagram-item {
+    width: 50%; } }
+
+/* -----------------------------------------------------------------------------
+// 3. Services Page 
+// ----------------------------------------------------------------------------- */
+.services .section-headline {
+  margin-bottom: 50px;
+  text-align: center; }
+  .services .section-headline h3 {
+    font-weight: 500;
+    text-transform: uppercase; }
+    .services .section-headline h3:after {
+      display: block;
+      content: ' ';
+      width: 40px;
+      height: 2px;
+      margin: 15px auto 30px auto;
+      background-color: #3fb3e5; }
+.services .hero-title {
+  background-image: url(../img/banner5.jpg); }
+.services .banner-video .play {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 16px;
+  margin: 0 auto;
+  background-color: #3fb3e5;
+  color: #fff;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+.services .info .imgbox h3 {
+  font-size: 20px; }
+.services .info .imgbox .align {
+  padding: 10px 30px 40px 30px; }
+
+/* -----------------------------------------------------------------------------
+// 4. Blog Page 
+// ----------------------------------------------------------------------------- */
+.blog .section-headline {
+  margin-bottom: 50px;
+  text-align: center; }
+  .blog .section-headline h3 {
+    font-weight: 500;
+    text-transform: uppercase; }
+    .blog .section-headline h3:after {
+      display: block;
+      content: ' ';
+      width: 40px;
+      height: 2px;
+      margin: 15px auto 30px auto;
+      background-color: #3fb3e5; }
+.blog .hero-title {
+  background-image: url(http://placehold.it/1895x900); }
+.blog .post {
+  position: relative;
+  overflow: hidden; }
+  .blog .post img {
+    position: absolute;
+    top: 0;
+    width: 50%; }
+  .blog .post img.reverse {
+    right: 0; }
+  .blog .post .col-md-6 {
+    padding: 0; }
+.blog .post-content {
+  padding: 60px 50px;
+  background-color: #f6fcff; }
+  .blog .post-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px; }
+    .blog .post-content h3 a {
+      color: #181818; }
+    .blog .post-content h3 + p {
+      margin-bottom: 30px; }
+
+/* -----------------------------------------------------------------------------
+// 5. Blog Detail Page
+// ----------------------------------------------------------------------------- */
+.blog-detail .hero-title {
+  background-image: url(http://placehold.it/1895x900); }
+.blog-detail .post .post-main {
+  background-color: #f6fcff; }
+  .blog-detail .post .post-main .align {
+    padding: 0 40px 40px 40px; }
+@media (max-width: 768px) {
+  .blog-detail .post .post-main .align {
+    padding: 0 20px 40px 20px; } }
+.blog-detail .post img {
+  margin-bottom: 20px; }
+.blog-detail .post-heading {
+  margin-bottom: 20px; }
+  .blog-detail .post-heading h2 {
+    font-size: 30px; }
+  .blog-detail .post-heading p {
+    font-size: 13px; }
+    .blog-detail .post-heading p span {
+      margin: 0 5px; }
+.blog-detail .post-content p {
+  margin-bottom: 30px; }
+.blog-detail .post .post-social {
+  padding: 0;
+  margin: 20px 0 0 0; }
+  .blog-detail .post .post-social li {
+    margin-right: 15px;
+    list-style-type: none;
+    display: inline-block; }
+  .blog-detail .post .post-social a {
+    color: #c4c4c4;
+    font-size: 16px; }
+    .blog-detail .post .post-social a:hover {
+      color: #3fb3e5; }
+.blog-detail .post .post-comments {
+  margin-top: 100px; }
+  .blog-detail .post .post-comments h3 {
+    text-transform: uppercase;
+    font-size: 26px;
+    margin: 0 0 30px 0; }
+  .blog-detail .post .post-comments .comment {
+    position: relative;
+    padding: 40px 50px 40px 30px;
+    background-color: #f6fcff;
+    margin-bottom: 30px; }
+    .blog-detail .post .post-comments .comment:before, .blog-detail .post .post-comments .comment:after {
+      content: " ";
+      display: table; }
+    .blog-detail .post .post-comments .comment:after {
+      clear: both; }
+    .blog-detail .post .post-comments .comment-avatar {
+      width: 10%;
+      float: left;
+      border-radius: 100%;
+      overflow: hidden; }
+      .blog-detail .post .post-comments .comment-avatar img {
+        margin: 0; }
+    .blog-detail .post .post-comments .comment .align {
+      float: left;
+      margin-left: 4%;
+      width: 86%; }
+    .blog-detail .post .post-comments .comment h5 {
+      display: inline-block;
+      margin: 0 10px 30px 0;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #4b4b4b;
+      font-weight: 500; }
+    .blog-detail .post .post-comments .comment .date {
+      font-size: 12px; }
+    .blog-detail .post .post-comments .comment .reply {
+      font-family: "Montserrat", Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: #9c9c9c; }
+      .blog-detail .post .post-comments .comment .reply i {
+        display: inline-block;
+        margin-right: 8px;
+        font-size: 16px;
+        position: relative;
+        bottom: -5px; }
+  @media (max-width: 992px) {
+    .blog-detail .post .post-comments .comment {
+      padding: 40px 30px 40px 30px; } }
+.blog-detail .post .comment-form {
+  margin-top: 100px; }
+  .blog-detail .post .comment-form h3 {
+    text-transform: uppercase;
+    font-size: 26px;
+    margin: 0 0 30px 0; }
+  .blog-detail .post .comment-form .form-control {
+    background-color: #f6fcff; }
+  .blog-detail .post .comment-form textarea {
+    height: 200px; }
+.blog-detail aside .widget {
+  padding: 40px;
+  margin-bottom: 30px;
+  background-color: #f6fcff; }
+  .blog-detail aside .widget h3 {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 30px 0; }
+.blog-detail aside .form-control {
+  padding-left: 20px;
+  background-color: #fff;
+  background-position: 90% center;
+  background-image: url(../img/search.png);
+  background-repeat: no-repeat; }
+.blog-detail aside .widget.posts {
+  padding: 40px 0 40px 0; }
+  .blog-detail aside .widget.posts h3 {
+    padding-left: 40px; }
+.blog-detail aside .recent-post {
+  padding: 20px 35px;
+  margin: 0 5px;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s; }
+  .blog-detail aside .recent-post:before {
+    display: inline-block;
+    float: left;
+    position: relative;
+    bottom: -7px;
+    content: ' ';
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    border: 1px solid #c4c4c4;
+    background-color: transparent; }
+  .blog-detail aside .recent-post .align {
+    margin-left: 23px; }
+  .blog-detail aside .recent-post .date {
+    margin: 0;
+    font-size: 12px; }
+  .blog-detail aside .recent-post h4 {
+    margin: 0; }
+  .blog-detail aside .recent-post a {
+    font-size: 14px;
+    color: #181818;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s; }
+    .blog-detail aside .recent-post a:hover {
+      text-decoration: none; }
+  .blog-detail aside .recent-post:hover {
+    background-color: #fff; }
+    .blog-detail aside .recent-post:hover a {
+      color: #3fb3e5; }
+.blog-detail aside .widget.twitter {
+  background-color: #3fb3e5;
+  color: #fff; }
+  .blog-detail aside .widget.twitter h3 {
+    color: #fff; }
+  .blog-detail aside .widget.twitter .tweet p {
+    font-size: 13px;
+    opacity: .7; }
+  .blog-detail aside .widget.twitter .tweet h5 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px; }
+  .blog-detail aside .widget.twitter .owl-pagination {
+    bottom: 0px;
+    right: 0;
+    left: initial; }
+    .blog-detail aside .widget.twitter .owl-pagination .owl-page span {
+      margin: 5px 3px;
+      width: 10px;
+      height: 10px;
+      filter: Alpha(Opacity=100);
+      opacity: 1;
+      border: 1px solid #fff; }
+    .blog-detail aside .widget.twitter .owl-pagination .owl-page.active span {
+      border-color: #fff;
+      background-color: #fff; }
+.blog-detail aside .side-gallery {
+  margin-top: 30px; }
+  .blog-detail aside .side-gallery:before, .blog-detail aside .side-gallery:after {
+    content: " ";
+    display: table; }
+  .blog-detail aside .side-gallery:after {
+    clear: both; }
+  .blog-detail aside .side-gallery img {
+    width: 23%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 7px; }
+.blog-detail aside .sidebar-social {
+  padding: 0;
+  list-style-type: none; }
+  .blog-detail aside .sidebar-social:before, .blog-detail aside .sidebar-social:after {
+    content: " ";
+    display: table; }
+  .blog-detail aside .sidebar-social:after {
+    clear: both; }
+  .blog-detail aside .sidebar-social li {
+    display: inline-block;
+    float: left; }
+    .blog-detail aside .sidebar-social li:last-child a {
+      margin-right: 0; }
+  .blog-detail aside .sidebar-social a {
+    display: inline-block;
+    width: 40px;
+    height: 45px;
+    margin-right: 8px;
+    color: #fff;
+    line-height: 45px;
+    text-align: center; }
+  .blog-detail aside .sidebar-social .twitter-color {
+    background-color: #31aae2; }
+  .blog-detail aside .sidebar-social .facebook-color {
+    background-color: #0b5fa6; }
+  .blog-detail aside .sidebar-social .dribbble-color {
+    background-color: #e11396; }
+  .blog-detail aside .sidebar-social .instagram-color {
+    background-color: #313131; }
+  .blog-detail aside .sidebar-social .google-color {
+    background-color: #f52450; }
+  .blog-detail aside .sidebar-social .pinterest-color {
+    background-color: #7daa71; }
+.blog-detail aside .tags {
+  padding: 0; }
+  .blog-detail aside .tags:before, .blog-detail aside .tags:after {
+    content: " ";
+    display: table; }
+  .blog-detail aside .tags:after {
+    clear: both; }
+  .blog-detail aside .tags ul {
+    padding: 0; }
+  .blog-detail aside .tags li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 6px 0 0;
+    float: left; }
+  .blog-detail aside .tags a {
+    padding: 10px 15px;
+    font-size: 10px; }
+    .blog-detail aside .tags a:hover {
+      background-color: #3fb3e5;
+      color: #fff;
+      border-color: #3fb3e5; }
+
+/* -----------------------------------------------------------------------------
+// 6. Work Page 
+// ----------------------------------------------------------------------------- */
+.work .section-headline {
+  margin-bottom: 50px;
+  text-align: center; }
+  .work .section-headline h3 {
+    font-weight: 500;
+    text-transform: uppercase; }
+    .work .section-headline h3:after {
+      display: block;
+      content: ' ';
+      width: 40px;
+      height: 2px;
+      margin: 15px auto 30px auto;
+      background-color: #3fb3e5; }
+.work .hero-title {
+  background-image: url(http://placehold.it/1895x900); }
+.work .portfolio .portfolio-item .img {
+  margin-bottom: 0; }
+  .work .portfolio .portfolio-item .img:hover .caption {
+    opacity: 1; }
+.work .portfolio .portfolio-item .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+  .work .portfolio .portfolio-item .caption:after {
+    content: ' ';
+    position: absolute;
+    top: 5%;
+    left: 4%;
+    width: 92%;
+    height: 90%;
+    border: 1px solid #fff; }
+  .work .portfolio .portfolio-item .caption h4 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    .work .portfolio .portfolio-item .caption h4 a {
+      color: #fff; }
+    .work .portfolio .portfolio-item .caption h4 small {
+      display: block;
+      color: #fff;
+      margin-top: 10px;
+      font-size: 10px;
+      letter-spacing: 2px; }
+.work .portfolio .portfolio-item.split .img {
+  width: 50% !important;
+  float: left; }
+.work .work-item.split .img {
+  width: 50% !important;
+  float: left; }
+
+/* -----------------------------------------------------------------------------
+// 7. Work Detail Page 
+// ----------------------------------------------------------------------------- */
+.work-detail .section-headline {
+  margin-bottom: 50px;
+  text-align: center; }
+  .work-detail .section-headline h3 {
+    font-weight: 500;
+    text-transform: uppercase; }
+    .work-detail .section-headline h3:after {
+      display: block;
+      content: ' ';
+      width: 40px;
+      height: 2px;
+      margin: 15px auto 30px auto;
+      background-color: #3fb3e5; }
+.work-detail .hero-title {
+  padding: 230px 0;
+  background-image: url(http://placehold.it/1895x900); }
+.work-detail .about h3 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 20px; }
+.work-detail .banner {
+  padding-bottom: 70px; }
+  .work-detail .banner h3 {
+    margin: 0 0 30px 0;
+    font-size: 30px;
+    text-transform: uppercase; }
+    .work-detail .banner h3 + p {
+      margin-bottom: 50px; }
+  .work-detail .banner img {
+    position: relative;
+    bottom: -70px; }
+.work-detail .clients img {
+  opacity: .5;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+  .work-detail .clients img:hover {
+    opacity: 1; }
+.work-detail .clients .owl-pagination {
+  bottom: -50px; }
+  .work-detail .clients .owl-pagination .owl-page span {
+    margin: 5px 4px;
+    filter: Alpha(Opacity=100);
+    opacity: 1;
+    border: 1px solid #c6c6c6; }
+  .work-detail .clients .owl-pagination .owl-page.active span {
+    border-color: #3fb3e5;
+    background-color: transparent; }
+.work-detail .pagination {
+  display: block;
+  padding: 30px 0 0 0;
+  border-top: 1px solid #f1f1f1;
+  border-radius: 0;
+  font-size: 18px; }
+  .work-detail .pagination a {
+    color: #e5e5e5; }
+    .work-detail .pagination a:hover {
+      color: #c5c5c5; }
+  .work-detail .pagination .arrow {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #e5e5e5; }
+    .work-detail .pagination .arrow:hover {
+      border-color: #c5c5c5; }
+
+/* -----------------------------------------------------------------------------
+// 8. Contact Page 
+// ----------------------------------------------------------------------------- */
+.contact .section-headline {
+  margin-bottom: 50px;
+  text-align: center; }
+  .contact .section-headline h3 {
+    font-weight: 500;
+    text-transform: uppercase; }
+    .contact .section-headline h3:after {
+      display: block;
+      content: ' ';
+      width: 40px;
+      height: 2px;
+      margin: 15px auto 30px auto;
+      background-color: #3fb3e5; }
+.contact .hero-title {
+  padding: 230px 0;
+  background-image: url(http://placehold.it/1895x900); }
+.contact .offices .imgbox:hover .caption {
+  opacity: 1; }
+.contact .offices .imgbox .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+  .contact .offices .imgbox .caption:after {
+    content: ' ';
+    position: absolute;
+    top: 5%;
+    left: 4%;
+    width: 92%;
+    height: 90%;
+    border: 1px solid #fff; }
+  .contact .offices .imgbox .caption h4 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    .contact .offices .imgbox .caption h4 a {
+      color: #fff; }
+    .contact .offices .imgbox .caption h4 small {
+      display: block;
+      color: #fff;
+      margin-top: 10px;
+      font-size: 10px;
+      letter-spacing: 2px; }
+.contact .offices .imgbox .align {
+  padding: 20px 30px 40px 30px; }
+.contact .offices .imgbox h3 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 5px; }
+  .contact .offices .imgbox h3 + p {
+    margin-bottom: 20px; }
+.contact .contact-form .form-control {
+  background-color: #f6fcff; }
+.contact .contact-form textarea {
+  height: 260px; }
+
+/*# sourceMappingURL=pages.css.map */

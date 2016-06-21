@@ -1,0 +1,143 @@
+/* -----------------------------------------------------------------------------
+// 8. Contact Page 
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Section Headline
+// - Section 1 - Hero Title
+// - Section 2 - Offices
+// - Section 3 - Contact Form
+
+
+//
+// contact
+// --------------------------------------------------
+.contact {
+
+// Section Headline
+// --------------------------------------------------
+    .section-headline {
+        margin-bottom: 50px;
+        text-align: center;
+
+        h3 {
+            font-weight: 500;
+            text-transform: uppercase;
+
+            &:after {
+                display: block;
+                content: ' ';
+                width: 40px;
+                height: 2px;
+                margin: 15px auto 30px auto;
+                background-color: $brand-color;
+            }
+        }
+    }
+
+
+// Section 1 - Hero Title
+// --------------------------------------------------
+	.hero-title {
+        padding: 230px 0;
+		background-image: url(http://placehold.it/1895x900);
+	}
+
+
+// Section 2 - Offices
+// --------------------------------------------------
+    .offices {
+        .imgbox {
+
+            &:hover {
+                .caption {
+                    opacity: 1;
+                }
+            }
+            .caption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .3);
+                text-align: center;
+                opacity: 0;
+                @include transition(opacity, .5s);
+
+                &:after {
+                    content: ' ';
+                    position: absolute;
+                    top: 5%;
+                    left: 4%;
+                    width: 92%;
+                    height: 90%;
+                    border: 1px solid #fff;
+                }
+
+                h4 {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    left: 0;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+
+                    a {
+                        color: #fff;
+                    }
+
+                    small {
+                        display: block;
+                        color: #fff;
+                        margin-top: 10px;
+                        font-size: 10px;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+
+            .align {
+                padding: 20px 30px 40px 30px;
+            }
+
+            h3 {
+                font-size: 16px;
+                letter-spacing: 2px;
+                margin-bottom: 5px;
+
+                & + p {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+
+// Section 3 - Contact Form
+// --------------------------------------------------
+    .contact-form {
+        .form-control {
+            background-color: $light-bg-color;
+        }
+
+        textarea {
+            height: 260px;
+        }
+    }
+}
+
+
+
+
+
+
+
+

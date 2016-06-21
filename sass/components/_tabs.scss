@@ -1,0 +1,228 @@
+/* -----------------------------------------------------------------------------
+// 10. Tabs 
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - General Tabs Styles
+// - Tabs Style 1
+// - Tabs Style 2
+// - Tabs Style 3
+// - Tabs Style 4
+
+
+// General Tabs Styles
+// --------------------------------------------------
+.nav-tabs {
+	border-color: #f1f1f1;
+
+    > li {
+        > a {
+            font-family: $links-font-family;
+            font-size: 13px;
+            color: #4b4b4b;
+            text-transform: uppercase;
+        	border-radius: 0;
+        	margin-right: 0;
+            padding: 10px 25px;
+            border: none;
+
+            border: 1px solid #f1f1f1;
+            border-right: none;
+            border-bottom-color: transparent;
+
+            &:hover {
+            	background-color: #f7f7f7;
+            }
+        }
+
+        &:last-child > a {
+            border-right: 1px solid #f1f1f1;
+        }
+    }
+
+    > li.active >a,
+    > li.active >a:focus,
+    > li.active >a:hover {
+    	color: #4b4b4b;
+        border: none;
+    }
+}
+
+.tab-content {
+	margin-bottom: 15px;
+
+    > .tab-pane {
+    	padding: 20px 35px;
+        margin-top: 2px;
+    	background-color: $light-bg-color;
+    	border-top: 0;
+
+        img {
+            float: left;
+            margin: 0 20px 15px 0;
+        }
+    }
+}
+
+// Tabs Style 1
+// --------------------------------------------------
+.nav-tabs.style1 {
+    li:last-child > a {
+        border-right: 1px solid #f1f1f1 !important;
+    }
+}
+
+// Tabs Style 2
+// --------------------------------------------------
+.nav-tabs.style2 {
+	border: none;
+
+    > li {
+        width: 25%;
+        > a {
+            padding: 15px 0;
+            text-align: center;
+            border: none;
+            color: #9c9c9c;
+            margin: 0 5px;
+            font-size: 12px;
+            background-color: $light-bg-color;
+
+            &:hover {
+                border-color: transparent;
+            }
+        }
+
+        &:first-child a {
+            margin-left: 0;
+        }
+
+        &:last-child a {
+            margin-right: 0;
+        }
+
+    }
+
+    > li.active >a,
+    > li.active >a:focus,
+    > li.active >a:hover {
+        color: #4b4b4b;
+        background-color: $light-bg-color;
+    }
+}
+
+@media( max-width: 992px){
+    .nav-tabs.style2 > li > a {
+        margin-bottom: 10px; // prevent it from collapsing on small screens
+    }
+}
+
+// Tabs Style 3
+// --------------------------------------------------
+.nav-tabs.style3  {
+	width: 35%;
+	float: left;
+    border: none;
+
+    > li {
+    	float: left;
+    	width: 100%;
+
+        > a {
+        	background-color: #4b4b4b;
+        	color: #fff;
+        	border: none;
+            border-bottom: 3px solid #fff;
+            padding: 25px;
+
+            i {
+                font-size: 16px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    > li.active > a,
+    > li.active > a:focus,
+    > li.active > a:hover {
+    	background-color: #f9f9f9;
+    	color: $brand-color;
+    	border: none;
+    }
+}
+
+.tab-content.style3  {
+    width: 65%;
+	float: left;
+    background-color: #f9f9f9;
+
+    .tab-pane {
+    	border: none;
+    }
+
+    h4 {
+        margin-bottom: 20px;
+    }
+}
+
+// Tabs Style 4
+// --------------------------------------------------
+.nav-tabs.style4  {
+	width: 35%;
+	float: left;
+
+    > li {
+    	float: left;
+    	width: 100%;
+
+        > a {
+            color: #9c9c9c;
+        	background-color: #fff;
+        	border: 1px solid #f1f1f1;
+            padding: 25px;
+        }
+
+        &:last-child > a {
+            border-bottom: 1px solid #f1f1f1 !important;
+        }
+    }
+
+    > li.active > a,
+    > li.active > a:focus,
+    > li.active > a:hover {
+    	color: $brand-color;
+        border: none;
+
+        border-top: 1px solid #f1f1f1;
+        border-left: 1px solid #f1f1f1;
+    }
+}
+
+.tab-content.style4  {
+	width: 65%;
+	float: left;
+
+    .tab-pane {
+    	border: none;
+        padding: 0 25px;
+    }
+
+    img {
+        margin-bottom: 30px;
+    }
+}
+
+@media all and (max-width: 992px){
+	.nav-tabs.style4  {
+		width: 25%;
+	}
+	.tab-content.style4  {
+		width: 75%;
+	}
+
+    .tab-content.style4 {
+        margin-bottom: 20px;
+    }
+}

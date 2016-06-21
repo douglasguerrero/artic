@@ -1,0 +1,236 @@
+/* -----------------------------------------------------------------------------
+// 15. Imageboxes 
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Image Box style 1
+// - Image Box style 2
+// - Image Box style 3
+// - Image Box style 4
+// - Image Box style 5
+
+// *************************************************
+// We redesigned these components to suit the 
+// 'Spa' template:
+// 
+// - Image Box style 4
+// **************************************************
+
+// Image Box style 1
+// --------------------------------------------------
+.imgbox.style1 {
+    background-color: #f9f9f9;
+    padding: 15px 0 15px 30px;
+    margin-bottom: 40px;
+
+    -webkit-border-top-right-radius: 100px;
+            border-top-right-radius: 100px;
+
+    -webkit-border-bottom-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+
+    // image
+    .img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        margin-right: 15px;
+        margin-bottom: 0;
+        overflow: hidden;
+        float: right;
+    }
+
+    //heading
+    h4 {
+        text-transform: uppercase;
+        color: #4b4b4b;
+    }
+
+    // change the direction (from left to right)
+    &.opposite {
+        padding: 15px 0 15px 0;
+
+        -webkit-border-top-right-radius: 0;
+                border-top-right-radius: 0;
+
+        -webkit-border-bottom-right-radius: 0;
+                border-bottom-right-radius: 0;
+
+        -webkit-border-top-left-radius: 100px;
+                border-top-left-radius: 100px;
+
+        -webkit-border-bottom-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+
+        .img {
+            float: left;
+            margin: 0 30px 0 15px;
+        }
+    }
+
+    // clearing floats hack
+    @include clearfix();
+}
+
+
+// Image Box style 2
+// --------------------------------------------------
+.imgbox.style2 {
+    background-color: #fff;
+    margin-bottom: 40px;
+
+    @include transition(background, .5s);
+
+    // aligning the content
+    .align {
+        padding: 10px 20px 40px 20px;
+        text-align: center;
+    }
+
+    // heading
+    h3 {
+        color: #4b4b4b;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0 0 25px 0;
+        font-size: 14px;
+    }
+}
+
+
+// Image Box style 3
+// --------------------------------------------------
+.imgbox.style3 {
+    background-color: #f9f9f9;
+    margin-bottom: 40px;
+
+    // aligning the content
+    .align {
+        padding: 10px 40px 40px 40px;
+        text-align: center;
+    }
+
+    // heading
+    h3 {
+        color: #4b4b4b;
+        margin-bottom: 25px;
+    }
+}
+
+
+// Image Box style 4
+// --------------------------------------------------
+.imgbox.style4 {
+    margin-bottom: 40px;
+
+    // heading
+    h3 {
+        font-size: 20px;
+        color: #181818;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+
+    a {
+        font-family: $links-font-family;
+        font-weight: 600;
+        color: $brand-color;
+        text-transform: uppercase;
+    }
+}
+
+
+// Image Box style 5
+// --------------------------------------------------
+.imgbox.style5 {
+    background-color: #f9f9f9;
+    @include clearfix();
+
+    // simple grid
+
+    // image
+    .img {
+        width: 40%;
+        float: left;
+        margin-bottom: 0;
+    }
+
+    // aligning the content
+    .align {
+        width: 60%;
+        float: left;
+        padding: 57px 60px;
+        text-align: center;
+    }
+
+    // responsive screens
+    @media (max-width:992px) {
+        .img {
+            width: 100%;
+        }
+
+        .align {
+            width: 100%;
+            float: none;
+        }
+    }
+
+    // heading
+    h3 + p {
+        margin-top: 0;
+
+        // small divider
+        &:after {
+            content: '_';
+            display: block;
+            color: $brand-color;
+        }
+    }
+
+    // text conent
+    p + p {
+        margin-bottom: 50px;
+    }
+
+    // buttons
+    .btn {
+        text-transform: uppercase;
+
+        & + .btn {
+            margin-left: 10px;
+        }
+    }
+    // social icons
+    .social  {
+        padding: 0;
+        margin-top: 40px;
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        a {
+            display: inline-block;
+            font-size: 18px;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #c4c4c4;
+            color: #c4c4c4;
+            border-radius: 100%;
+            line-height: 50px;
+
+            &:hover {
+                background-color: $brand-color;
+                border-color: $brand-color;
+                color: #fff;
+            }
+        }
+    }
+}

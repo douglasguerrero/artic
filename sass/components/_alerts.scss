@@ -1,0 +1,105 @@
+/* -----------------------------------------------------------------------------
+// 5. Alerts 
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Alert
+
+
+// Alert
+// --------------------------------------------------
+.alert {
+    position: relative;
+    margin: 15px 0;
+    padding: 15px 40px 15px 60px;
+    border: none;
+    background-color: $color-default;
+    font-size: 16px;
+
+    &:before {
+        font-family: 'FontAwesome';
+        content: '\f0e0'; // envelope icon
+        font-size: 18px;
+        color: $color-default-dark;
+
+        position:absolute;
+        top: 16px;
+        left: 20px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    // close button
+    .alert-close {
+        position: absolute;
+        top: 15px;
+        right: 12px;
+        font-size: 14px;
+        color: #cacaca;
+        background: transparent;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    // warning alert
+    &-warning {
+        background-color: $color-warning;
+        color: $color-warning-dark;
+
+        &:before {
+            content: '\f0f3';
+            color: $color-warning-dark;
+        }
+    }
+
+    // danger alert
+    &-danger {
+        background-color: $color-danger;
+        color: $color-danger-dark;
+
+        &:before {
+            content: '\f071';
+            color: $color-danger-dark;
+        }
+    }
+
+    // success alert
+    &-success {
+        background-color: $color-success;
+        color: $color-success-dark;
+
+        &:before {
+            content: '\f00c';
+            color: $color-success-dark;
+        }
+    }
+
+    // help alert
+    &-help {
+        background-color: $color-help;
+        color: $color-help-dark;
+
+        &:before {
+            content: '\f0e9';
+            color: $color-help-dark;
+        }
+    }
+
+    // info alert
+    &-info {
+        background-color: $color-info;
+        color: $color-info-dark;
+
+        &:before {
+            content: '\f0a1';
+            color: $color-info-dark;
+        }
+    }
+}

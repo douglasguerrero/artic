@@ -1,0 +1,344 @@
+/* -----------------------------------------------------------------------------
+// 1. Homepage
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Section Headline
+// - Section 1 - Hero Slider
+// - Section 3 - Portfolio
+// - Section 6 - Work
+// - Section 7 - Testimonials
+// - Section 9 - News
+// - Section 10 - Clients
+
+
+//
+// Homepage
+// --------------------------------------------------
+.homepage {
+
+// Section Headline
+// --------------------------------------------------
+    .section-headline {
+        margin-bottom: 50px;
+        text-align: center;
+
+        h3 {
+            font-weight: 500;
+            text-transform: uppercase;
+
+            &:after {
+                display: block;
+                content: ' ';
+                width: 40px;
+                height: 2px;
+                margin: 15px auto 30px auto;
+                background-color: $brand-color;
+            }
+        }
+    }
+
+
+// Section 1 - Hero Slider
+// --------------------------------------------------
+    .hero-slider {
+        position: relative;
+        max-height: 700px;
+        overflow: hidden; // prevents the background image from collapsing
+        text-align: center;
+
+        // positioning it in the center
+        .content {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+
+            -webkit-transform: translateY(-50%);
+               -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                 -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+        }
+
+        h2 {
+            font-family: $links-font-family;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            font-size: 50px;
+            font-weight: 600;
+            color: #fff;
+
+            small {
+                display: block;
+                font-family: $headings-font-family;
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: #fff;
+                margin-top: 50px;
+                letter-spacing: 4px;
+            }
+        }
+
+        .btn {
+            margin-right: 10px;
+            background-color: transparent;
+            border-color: #fff;
+            color: #fff;
+
+            &:hover {
+                color: $brand-color;
+                background-color: #fff;
+            }
+        }
+
+        // pagination circles
+        .owl-pagination {
+            bottom: 70px;
+
+            .owl-page {
+                span {
+                    margin: 5px 4px;
+                    filter: Alpha(Opacity=100);
+                    opacity: 1;
+                    border: 1px solid #fff;
+                }
+
+                &.active span {
+                    border-color: #fff;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px){
+        .hero-slider {
+
+            .content {
+                top: 50%;
+            }
+
+            h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+                line-height: 24px;
+
+                small {
+                    margin-top: 15px;
+                    font-size: 14px;
+                }
+            }
+
+            .btn {
+                font-size: 12px;
+                padding: 10px 15px;
+            }
+
+            .owl-controls {
+                display: none !important;
+            }
+        }
+    }
+
+
+// Section 3 - Portfolio
+// --------------------------------------------------
+    .portfolio {
+        .portfolio-item {
+            .img {
+                margin-bottom: 0;
+
+                &:hover {
+                    .caption {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .caption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .3);
+                text-align: center;
+                opacity: 0;
+                @include transition(opacity, .5s);
+
+                &:after {
+                    content: ' ';
+                    position: absolute;
+                    top: 5%;
+                    left: 4%;
+                    width: 92%;
+                    height: 90%;
+                    border: 1px solid #fff;
+                }
+
+                h4 {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    left: 0;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+
+                    a {
+                        color: #fff;
+                    }
+
+                    small {
+                        display: block;
+                        color: #fff;
+                        margin-top: 10px;
+                        font-size: 10px;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+
+        .portfolio-item.split {
+            .img {
+                width: 50% !important;
+                float: left;
+            }
+        }
+    }
+
+
+// Section 6 - Work
+// --------------------------------------------------
+    .work {
+
+        .work-item {
+            width: 20%;
+            float: left;
+            padding: 0 15px;
+
+            .icon {
+                background-color: #fff;
+                color: $brand-color;
+
+                &:hover {
+                    background-color: $brand-color;
+                    color: #fff;
+                }
+            }
+
+            h4 {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width:992px) {
+            .work-item {
+                width: 50%;
+            }
+        }
+    }
+
+
+// Section 7 - Testimonials
+// --------------------------------------------------
+    .testimonials {
+        padding-bottom: 120px;
+        background: url(http://placehold.it/1895x900) center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+
+// Section 9 - News
+// --------------------------------------------------
+    .news {
+        .post {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+                width: 50%;
+            }
+
+            img.reverse {
+                right: 0;
+            }
+
+            .col-md-6 {
+                padding: 0;
+            }
+        }
+
+        .post-content {
+            padding: 60px 50px;
+            background-color: $light-bg-color;
+
+            h3 {
+                margin: 0 0 10px 0;
+                font-size: 20px;
+
+                a {
+                    color: #181818;
+                }
+
+                & + p {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+
+// Section 10 - Clients
+// --------------------------------------------------
+    .clients {
+        .owl-item {
+            text-align: center;
+        }
+
+        img {
+            opacity: .5;
+            @include transition(opacity, .5s);
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        // pagination circles
+        .owl-pagination {
+            bottom: -50px;
+
+            .owl-page {
+
+                span {
+                    margin: 5px 4px;
+                    filter: Alpha(Opacity=100);
+                    opacity: 1;
+                    border: 1px solid #c6c6c6;
+                }
+
+                &.active span {
+                    border-color: $brand-color;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,399 @@
+/* -----------------------------------------------------------------------------
+// 5. Blog Detail Page
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Section Headline
+// - Section 1 - Hero Title
+// - Section 2 - Post
+
+
+//
+// Blog Detail Page
+// --------------------------------------------------
+.blog-detail {
+
+// Section 1 - Hero Title
+// --------------------------------------------------
+    .hero-title {
+        background-image: url(http://placehold.it/1895x900);
+    }
+
+
+// Section 2 - Post
+// --------------------------------------------------
+    .post {
+        .post-main {
+            background-color: $light-bg-color;
+
+            .align {
+                padding: 0 40px 40px 40px;
+            }
+        }
+
+        @media (max-width:768px){
+            .post-main .align {
+                padding: 0 20px 40px 20px;
+            }
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        &-heading {
+            margin-bottom: 20px;
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 13px;
+
+                span {
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        &-content {
+            p {
+                margin-bottom: 30px;
+            }
+        }
+
+        .post-social {
+            padding: 0;
+            margin: 20px 0 0 0;
+
+            li {
+                margin-right: 15px;
+                list-style-type: none;
+                display: inline-block;
+            }
+
+            a {
+                color: #c4c4c4;
+                font-size: 16px;
+
+                &:hover {
+                    color: $brand-color;
+                }
+            }
+        }
+
+
+        // Post Comments
+        .post-comments {
+            margin-top: 100px;
+
+            h3 {
+                text-transform: uppercase;
+                font-size: 26px;
+                margin: 0 0 30px 0;
+            }
+
+            .comment {
+                position: relative;
+                padding: 40px 50px 40px 30px;
+                background-color: $light-bg-color;
+                margin-bottom: 30px;
+                @include clearfix();
+
+                &-avatar {
+                    width: 10%;
+                    float: left;
+                    border-radius: 100%;
+                    overflow: hidden;
+
+                    img {
+                        margin: 0;
+                    }
+                }
+
+                .align {
+                    float: left;
+                    margin-left: 4%;
+                    width: 86%;
+                }
+
+                h5 {
+                    display: inline-block;
+                    margin: 0 10px 30px 0;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    color: #4b4b4b;
+                    font-weight: 500;
+                }
+
+                .date {
+                    font-size: 12px;
+                }
+
+                .reply {
+                    font-family: $links-font-family;
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    color: #9c9c9c;
+
+                    i {
+                        display: inline-block;
+                        margin-right: 8px;
+                        font-size: 16px;
+                        position: relative;
+                        bottom: -5px;
+                    }
+                }
+            }
+
+            @media (max-width:992px) {
+                .comment {
+                    padding: 40px 30px 40px 30px;
+                }
+            }
+        }
+
+        // Comment Form
+        .comment-form {
+            margin-top: 100px;
+
+            h3 {
+                text-transform: uppercase;
+                font-size: 26px;
+                margin: 0 0 30px 0;
+            }
+
+            .form-control {
+                background-color: $light-bg-color;
+            }
+
+            textarea {
+                height: 200px;
+            }
+        }
+    }
+
+    // Sidebar
+    aside {
+
+        .widget {
+            padding: 40px;
+            margin-bottom: 30px;
+            background-color: $light-bg-color;
+
+            h3 {
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+                margin: 0 0 30px 0;
+            }
+        }
+
+        // search widget
+        .form-control {
+            padding-left: 20px;
+            background-color: #fff;
+            background-position: 90% center;
+            background-image: url(../img/search.png);
+            background-repeat: no-repeat;
+        }
+
+        // posts widget
+        .widget.posts {
+            padding: 40px 0 40px 0;
+
+            h3 {
+                padding-left: 40px;
+            }
+        }
+
+        .recent-post {
+            padding: 20px 35px;
+            margin: 0 5px;
+            @include transition(background-color, .3s);
+
+            &:before {
+                display: inline-block;
+                float: left;
+                position: relative;
+                bottom: -7px;
+                content: ' ';
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                border: 1px solid #c4c4c4;
+                background-color: transparent;
+            }
+
+            .align {
+                margin-left: 23px;
+            }
+
+            .date {
+                margin: 0;
+                font-size: 12px;
+            }
+
+            h4 {
+                margin: 0;
+            }
+
+            a {
+                font-size: 14px;
+                color: #181818;
+                @include transition(color, .3s);
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &:hover {
+                background-color: #fff;
+
+                a {
+                    color: $brand-color;
+                }
+            }
+        }
+
+        // tweets widget
+        .widget.twitter {
+            background-color: $brand-color;
+            color: #fff;
+
+            h3 {
+                color: #fff;
+            }
+
+            .tweet {
+                p {
+                    font-size: 13px;
+                    opacity: .7;
+                }
+
+                h5 {
+                    margin-top: 20px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-size: 10px;
+                }
+            }
+
+            // pagination circles
+            .owl-pagination {
+                bottom: 0px;
+                right: 0;
+                left: initial;
+
+                .owl-page {
+                    span {
+                        margin: 5px 3px;
+                        width: 10px;
+                        height: 10px;
+                        filter: Alpha(Opacity=100);
+                        opacity: 1;
+                        border: 1px solid #fff;
+                    }
+
+                    &.active span {
+                        border-color: #fff;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        .side-gallery {
+            margin-top: 30px;
+            @include clearfix();
+
+            img {
+                width: 23%;
+                float: left;
+                margin-right: 2%;
+                margin-bottom: 7px;
+            }
+        }
+
+        .sidebar-social {
+            padding: 0;
+            list-style-type: none;
+            @include clearfix();
+
+            li {
+                display: inline-block;
+                float: left;
+
+                &:last-child a {
+                    margin-right: 0;
+                }
+            }
+
+            a {
+                display: inline-block;
+                width: 40px;
+                height: 45px;
+                margin-right: 8px;
+                color: #fff;
+                line-height: 45px;
+                text-align: center;
+            }
+
+            .twitter-color {
+                background-color: #31aae2;
+            }
+
+            .facebook-color {
+                background-color: #0b5fa6;
+            }
+
+            .dribbble-color {
+                background-color: #e11396;
+            }
+
+            .instagram-color {
+                background-color: #313131;
+            }
+
+            .google-color {
+                background-color: #f52450;
+            }
+
+            .pinterest-color {
+                background-color: #7daa71;
+            }
+        }
+
+        // tags widget
+        .tags {
+            padding: 0;
+            @include clearfix();
+
+            ul {
+                padding: 0;
+            }
+
+            li {
+                display: inline-block;
+                list-style: none;
+                margin: 0 6px 0 0;
+                float: left;
+            }
+
+            a {
+                padding: 10px 15px;
+                font-size: 10px;
+
+                &:hover {
+                    background-color: $brand-color;
+                    color: #fff;
+                    border-color: $brand-color;
+                }
+            }
+        }
+    }
+}

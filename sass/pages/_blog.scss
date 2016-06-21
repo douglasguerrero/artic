@@ -1,0 +1,93 @@
+/* -----------------------------------------------------------------------------
+// 4. Blog Page 
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Section Headline
+// - Section 1 - Hero Title
+// - Section 2 - Posts 
+
+
+//
+// Blog
+// --------------------------------------------------
+.blog {
+
+// Section Headline
+// --------------------------------------------------
+    .section-headline {
+        margin-bottom: 50px;
+        text-align: center;
+
+        h3 {
+            font-weight: 500;
+            text-transform: uppercase;
+
+            &:after {
+                display: block;
+                content: ' ';
+                width: 40px;
+                height: 2px;
+                margin: 15px auto 30px auto;
+                background-color: $brand-color;
+            }
+        }
+    }
+
+
+// Section 1 - Hero Title
+// --------------------------------------------------
+	.hero-title {
+		background-image: url(http://placehold.it/1895x900);
+	}
+
+
+// Section 2 - Post 
+// --------------------------------------------------
+    .post {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 0;
+            width: 50%;
+        }
+
+        img.reverse {
+            right: 0;
+        }
+
+        .col-md-6 {
+            padding: 0;
+        }
+    }
+
+    .post-content {
+        padding: 60px 50px;
+        background-color: $light-bg-color;
+
+        h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+
+            a {
+                color: #181818;
+            }
+
+            & + p {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

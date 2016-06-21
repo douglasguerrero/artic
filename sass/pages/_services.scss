@@ -1,0 +1,95 @@
+/* -----------------------------------------------------------------------------
+// 3. Services Page 
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Section Headline
+// - Section 1 - Hero Title
+// - Section 3 - Banner Video
+// - Section 5 - Info
+
+
+//
+// Services
+// --------------------------------------------------
+.services {
+
+// Section Headline
+// --------------------------------------------------
+    .section-headline {
+        margin-bottom: 50px;
+        text-align: center;
+
+        h3 {
+            font-weight: 500;
+            text-transform: uppercase;
+
+            &:after {
+                display: block;
+                content: ' ';
+                width: 40px;
+                height: 2px;
+                margin: 15px auto 30px auto;
+                background-color: $brand-color;
+            }
+        }
+    }
+
+
+// Section 1 - Hero Title
+// --------------------------------------------------
+	.hero-title {
+		background-image: url(http://placehold.it/1895x900);
+	}
+
+
+// Section 3 - Banner Video
+// --------------------------------------------------
+    .banner-video {
+        .play {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            font-size: 16px;
+            margin: 0 auto;
+            background-color: $brand-color;
+            color: #fff;
+
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+
+
+// Section 5 - Info
+// --------------------------------------------------
+    .info {
+        .imgbox {
+            h3 {
+                font-size: 20px;
+            }
+
+            .align {
+                padding: 10px 30px 40px 30px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
